@@ -1,0 +1,16 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {SEED,changeStatus,validateRows} from '../data.js';
+import {mergeFeed,emptySyncState,validateFeed} from '../sync.js';
+const sample={id:'applied-1',company:'Example Company',role:'Summer 2027 Internship',status:'Interviewing',priority:'Normal',hasApplied:true,history:[],appliedDate:''};
+const row=()=>structuredClone(sample);
+const event=(patch={})=>({id:'gmail:abc123',kind:'gmail',messageId:'abc123',recordId:'applied-1',company:'Example Company',role:sample.role,status:'Rejected',occurredAt:'2026-09-14T12:00:00Z',evidence:'Explicit role-specific decision.',...patch});
+const feed=(events)=>({schemaVersion:1,lastCheckedAt:'2026-09-14T14:00:00Z',events});
+test('new evidence applies once and survives backup validation',()=>{const result=mergeFeed([row()],emptySyncState(),feed([event()]));assert.equal(result.rows[0].status,'Rejected');assert.equal(result.changes.length,1);const restored=validateRows(result.rows);assert.equal(restored[0].mailEvidence.messageId,'abc123');assert.equal(mergeFeed(restored,result.state,feed([event()])).changes.length,0);});
+test('confirmation never downgrades interview status but fills known date',()=>{const r=mergeFeed([row()],emptySyncState(),feed([event({status:'Applied',appliedDate:'2026-08-07'})])).rows[0];assert.equal(r.status,'Interviewing');assert.equal(r.appliedDate,'2026-08-07');});
+test('historical evidence preserves newer manual decisions and flags conflict',()=>{const r=changeStatus(row(),'Applied');const result=mergeFeed([r],emptySyncState(),feed([event()]));assert.equal(result.rows[0].status,'Applied');assert.equal(result.state.review.length,1);});
+test('company alone cannot match another requisition',()=>{const result=mergeFeed([row()],emptySyncState(),feed([event({recordId:undefined,role:'Different 2026 internship'})]));assert.equal(result.rows[0].status,'Interviewing');assert.equal(result.state.review.length,1);});
+test('deleted applications do not reappear',()=>{const s=emptySyncState();s.deleted=['applied-1'];assert.equal(mergeFeed([],s,feed([event({allowCreate:true})])).rows.length,0);});
+test('out-of-order evidence does not overwrite newer decision',()=>{const r={...row(),status:'Rejected',lastStatusEventAt:'2026-09-15T00:00:00Z'};assert.equal(mergeFeed([r],emptySyncState(),feed([event({status:'Interviewing'})])).rows[0].status,'Rejected');});
+test('new matched applications preserve manual notes and priority',()=>{const r={...row(),notes:'Keep this',priority:'High'};const result=mergeFeed([r],emptySyncState(),feed([event({note:'Replace?',priority:'Normal'})]));assert.equal(result.rows[0].notes,'Keep this');assert.equal(result.rows[0].priority,'High');});
+test('search cannot change application state',()=>{assert.throws(()=>validateFeed(feed([event({kind:'search',status:'Applied',link:'https://example.com'})])));});
