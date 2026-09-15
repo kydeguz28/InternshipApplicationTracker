@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 1,
+  "applications": [
+    {
+      "id": "role-0091ecc4cb311659fb4b",
+      "company": "Amazon Robotics",
+      "role": "Industrial Development Engineer Intern/Co-op – 2027",
+      "status": "To Apply"
+    },
+    {
+      "id": "role-07e5ee459d31cec60e2b",
+      "company": "Intel",
+      "role": "Platform Hardware & Systems Engineering Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-0d87e3dc699f1d8e6dae",
+      "company": "Boeing",
+      "role": "Engineering Opportunities",
+      "status": "Applied"
+    },
+    {
+      "id": "role-13d66642f344766e33f6",
+      "company": "Blue Origin",
+      "role": "Manufacturing Engineering Internship, Undergraduate, Summer 2027",
+      "status": "To Apply"
+    },
+    {
+      "id": "role-18d33ed5dd62faed21c4",
+      "company": "Red Bull Powertrains",
+      "role": "Design Engineering Placement",
+      "status": "Applied"
+    },
+    {
+      "id": "role-1b3af6a12213896b0190",
+      "company": "Zipline",
+      "role": "Applications Engineer Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-2125e0c95de6296146ba",
+      "company": "Anduril",
+      "role": "2027 Manufacturing Engineer Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-281e9b0c43a9d2563a44",
+      "company": "Blue Origin",
+      "role": "Test Engineering Internship, Undergraduate, Summer 2027",
+      "status": "To Apply"
+    },
+    {
+      "id": "role-28c8c38bbb5e87b36cb6",
+      "company": "Rocket Lab",
+      "role": "Fluid Component Intern, Summer 2027",
+      "status": "To Apply"
+    },
+    {
+      "id": "role-305e3e5d6885e0f9a4d8",
+      "company": "Stryker",
+      "role": "Summer 2027 Internship — Mechanical Engineering — California (Evergreen)",
+      "status": "Applied"
+    },
+    {
+      "id": "role-3963a1f05667d84165c2",
+      "company": "Honeywell",
+      "role": "Mechanical Engineering Summer 2027 Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-4162cce6cde65a3245f4",
+      "company": "Anduril",
+      "role": "2027 Mechanical Engineer Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-42a92379ba669d0b934d",
+      "company": "TSMC Arizona",
+      "role": "Summer 2027 Engineering Internship",
+      "status": "Applied"
+    },
+    {
+      "id": "role-42c22aef1c75559c3d43",
+      "company": "Rocket Lab",
+      "role": "Fluid Systems Intern, Summer 2027",
+      "status": "To Apply"
+    },
+    {
+      "id": "role-43a798dd8c3e28305eaf",
+      "company": "LLNL",
+      "role": "Laser & Experimental Systems Engineering Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-46c7eb1474c578509d2a",
+      "company": "Freeform",
+      "role": "Additive Engineering Intern, Summer 2027",
+      "status": "Applied"
+    },
+    {
+      "id": "role-4966f3075c4ca85e2a26",
+      "company": "Intuitive",
+      "role": "Manufacturing/Equipment/Supplier Engineering Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-4db92e36d3e16678b9ba",
+      "company": "Sunday Robotics",
+      "role": "Industrial Design Intern",
+      "status": "Rejected"
+    },
+    {
+      "id": "role-5387d9a260825a8d73f4",
+      "company": "Moog",
+      "role": "Actuation Engineering Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-5461245fa206751a5d7a",
+      "company": "Figure",
+      "role": "Mechanical applications — older / Fall 2026",
+      "status": "Rejected"
+    },
+    {
+      "id": "role-5a7a7c2f99abfe7701e2",
+      "company": "Xona Space Systems",
+      "role": "Mechanical Engineering Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-5bf029e605fdd2b3cbb8",
+      "company": "Heirloom",
+      "role": "Mechanical Engineer Intern",
+      "status": "Rejected"
+    },
+    {
+      "id": "role-64b1efc72267f0ba45f3",
+      "company": "Western Digital",
+      "role": "Hardware Engineering Intern",
+      "status": "Needs Follow-up"
+    },
+    {
+      "id": "role-71c276309467041e7152",
+      "company": "Williams F1",
+      "role": "Structures Industrial Placement",
+      "status": "Applied"
+    },
+    {
+      "id": "role-78c546e73c933c9a7ff9",
+      "company": "Apple",
+      "role": "Mac Product Design Intern",
+      "status": "To Apply"
+    },
+    {
+      "id": "role-7aea13a05f4a7b272f1c",
+      "company": "McLaren Racing",
+      "role": "Engineering Intern",
+      "status": "Rejected"
+    },
+    {
+      "id": "role-7bfb1632df823502a689",
+      "company": "Zipline",
+      "role": "Controls Engineer Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-827c4a472b0475362f81",
+      "company": "Vertiv",
+      "role": "Mechanical Engineering Intern, Summer 2027",
+      "status": "Applied"
+    },
+    {
+      "id": "role-86f4d34f9debe65dfb89",
+      "company": "Freeform",
+      "role": "Mechanical Engineering Intern, Summer 2027",
+      "status": "Applied"
+    },
+    {
+      "id": "role-87807e109d4f4ce0af4e",
+      "company": "Zipline",
+      "role": "Long Range Platform Hardware Engineering Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-912e4a894b64c6be4ecf",
+      "company": "Shield AI",
+      "role": "Advanced Manufacturing Engineering Intern, Summer 2027",
+      "status": "Applied"
+    },
+    {
+      "id": "role-962c9d9bd8567b00a85d",
+      "company": "Zipline",
+      "role": "Computational Physics Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-9aee1d44e1daf6f49180",
+      "company": "Solcoa",
+      "role": "Mechanical Engineering Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-9d29a7c94b427fb65a46",
+      "company": "Neuralink",
+      "role": "Role not specified",
+      "status": "Applied"
+    },
+    {
+      "id": "role-a0dd6f9056d6de612b25",
+      "company": "Rocket Lab",
+      "role": "HITL Engineering Intern, Summer 2027",
+      "status": "To Apply"
+    },
+    {
+      "id": "role-ac25403f322413538e4f",
+      "company": "MKS",
+      "role": "Mechanical Automation Engineering Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-af49d1fc59d42f1298e9",
+      "company": "Medtronic",
+      "role": "Engineering Intern, Summer 2027",
+      "status": "Applied"
+    },
+    {
+      "id": "role-b2cff9faa053ba51cf8b",
+      "company": "Beyond Reach Labs",
+      "role": "Mechanical Engineer Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-b7b420ca854fdfe92370",
+      "company": "Skydio",
+      "role": "Flight Test Intern, Summer 2027",
+      "status": "Applied"
+    },
+    {
+      "id": "role-bbd3430806eeb2acfed9",
+      "company": "Zipline",
+      "role": "Mechanical Engineer Intern, Summer 2027",
+      "status": "Applied"
+    },
+    {
+      "id": "role-bc55654d4e5a50758666",
+      "company": "Rocket Lab",
+      "role": "Turbomachinery Intern, Summer 2027",
+      "status": "Applied"
+    },
+    {
+      "id": "role-be7eee6dcaf3905663fd",
+      "company": "Hermeus",
+      "role": "Manufacturing Engineering Intern, 2027",
+      "status": "Applied"
+    },
+    {
+      "id": "role-bf3a302a50e55914e2a2",
+      "company": "Rocket Lab",
+      "role": "Integration & Test Intern, Summer 2027",
+      "status": "To Apply"
+    },
+    {
+      "id": "role-c67f7b8c1bb710ee6f16",
+      "company": "Rocket Lab",
+      "role": "Additive Manufacturing Intern, Summer 2027",
+      "status": "Applied"
+    },
+    {
+      "id": "role-cbf12ff272ac0a9e5b54",
+      "company": "Intuitive",
+      "role": "Mechanical Engineering Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-cd9428259c53a5166454",
+      "company": "Zipline",
+      "role": "Hardware Test Intern",
+      "status": "Applied"
+    },
+    {
+      "id": "role-d0e4ff406728616d278e",
+      "company": "Amazon Robotics",
+      "role": "Hardware Development Engineer Intern/Co-op, Robotics – 2027",
+      "status": "To Apply"
+    },
+    {
+      "id": "role-dae63a0041ca74464a3f",
+      "company": "Red Bull Powertrains",
+      "role": "R&D Test Placement",
+      "status": "Applied"
+    },
+    {
+      "id": "role-dd09909140904ed307a4",
+      "company": "AeroVironment",
+      "role": "Aeromechanical Engineering Intern, Summer 2027",
+      "status": "To Apply"
+    },
+    {
+      "id": "role-e468d4aff5cd92debe2e",
+      "company": "General Matter",
+      "role": "Role not specified",
+      "status": "Applied"
+    },
+    {
+      "id": "role-e552b811ad9835a00dd8",
+      "company": "K2 Space",
+      "role": "Mechanical Engineering Intern, Summer 2027",
+      "status": "Applied"
+    },
+    {
+      "id": "role-ecfb01876e1a8c0a815f",
+      "company": "Skydio",
+      "role": "Product Design Engineer Intern, Summer 2027",
+      "status": "Applied"
+    },
+    {
+      "id": "role-ef378de1ad7ce1161307",
+      "company": "Visa Cash App Racing Bulls F1 Team",
+      "role": "Industrial Placement Programme 2027/2028",
+      "status": "Applied"
+    },
+    {
+      "id": "role-f22de231a3e839a0d4ab",
+      "company": "AeroVironment",
+      "role": "Mechanical Engineering Intern, Summer 2027",
+      "status": "To Apply"
+    },
+    {
+      "id": "role-fdd692c46a6bb748a2d5",
+      "company": "SpaceX",
+      "role": "Summer 2027 Engineering Internship/Co-op",
+      "status": "Interviewing"
+    }
+  ]
+}
