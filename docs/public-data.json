@@ -146,6 +146,12 @@
       "status": "Applied"
     },
     {
+      "id": "role-7477afc9939d407a1053",
+      "company": "Reframe Systems",
+      "role": "Mechanical Engineer Internship (Summer 27)",
+      "status": "Applied"
+    },
+    {
       "id": "role-78c546e73c933c9a7ff9",
       "company": "Apple",
       "role": "Mac Product Design Intern",
@@ -257,7 +263,7 @@
       "id": "role-bf3a302a50e55914e2a2",
       "company": "Rocket Lab",
       "role": "Integration & Test Intern, Summer 2027",
-      "status": "To Apply"
+      "status": "Applied"
     },
     {
       "id": "role-c67f7b8c1bb710ee6f16",
@@ -281,7 +287,7 @@
       "id": "role-d0e4ff406728616d278e",
       "company": "Amazon Robotics",
       "role": "Hardware Development Engineer Intern/Co-op, Robotics – 2027",
-      "status": "To Apply"
+      "status": "Applied"
     },
     {
       "id": "role-dae63a0041ca74464a3f",
