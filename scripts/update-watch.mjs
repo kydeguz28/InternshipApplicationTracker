@@ -11,7 +11,7 @@ if(!process.argv[2])throw Error('Usage: node scripts/update-watch.mjs path/to/ba
 const batch=validateFeed(JSON.parse((await readFile(process.argv[2],'utf8')).replace(/^\uFEFF/,'')));
 const old=await read('gmail-feed.json',{schemaVersion:1,lastCheckedAt:batch.lastCheckedAt,events:[]});
 const events=new Map(old.events.map(e=>[e.id,e]));for(const e of batch.events){if(events.has(e.id)&&JSON.stringify(events.get(e.id))!==JSON.stringify(e))throw Error('Existing event IDs are immutable; use a new correction event ID.');events.set(e.id,e);}
-const feed=validateFeed({schemaVersion:1,lastCheckedAt:batch.lastCheckedAt,events:[...events.values()],scan:batch.scan||{},alerts:batch.alerts||[]});
+const feed=validateFeed({schemaVersion:1,lastCheckedAt:batch.lastCheckedAt,events:[...events.values()],scan:{...(old.scan||{}),...(batch.scan||{})},alerts:batch.alerts||[]});
 const snapshot=await read('browser-snapshot.json',null);
 const merged=mergeFeed(snapshot?validateRows(snapshot.applications):SEED,snapshot?.syncState||emptySyncState(),feed);
 await write('gmail-feed.json',feed);
