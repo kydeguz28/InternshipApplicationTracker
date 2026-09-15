@@ -1,5 +1,6 @@
 import {mergeFeed,emptySyncState,normalizeSyncState} from './sync.js';
 import {SEED,STATUSES,PRIORITIES,validateRows,filteredRows,changeStatus,safeLink} from './data.js';
+const hosted=document.body.dataset.hosting==='static';
 const $=s=>document.querySelector(s), KEY='kyle.internships.v1', esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])), cls=s=>s.toLowerCase().replaceAll(' ','-');
 let syncState=emptySyncState(),undoSync=null,syncBusy=false,snapshotQueue=Promise.resolve();
 let rows=structuredClone(SEED),loadError='',view='All applications',format='table',undo=null,toastTimer;
@@ -48,10 +49,12 @@ $('#import').onclick=()=>$('#import-file').click();$('#import-file').onchange=as
 render();if(loadError){$('#save-state').textContent='Recovery needed · export backup';$('#save-state').classList.add('error-state');toast(loadError);}else persist();
 
 function saveSnapshot(){
+ if(hosted)return;
  const body=JSON.stringify({schemaVersion:1,applications:rows,syncState});
  snapshotQueue=snapshotQueue.catch(()=>{}).then(async()=>{const response=await fetch('/api/snapshot',{method:'POST',headers:{'Content-Type':'application/json'},body});if(!response.ok)throw Error('Snapshot failed');}).catch(()=>{$('#sync-status').textContent='Browser saved · job-watch copy unavailable';});
 }
 async function pullUpdates(){
+ if(hosted)return;
  if(syncBusy||loadError||$('#editor').open)return;
  syncBusy=true;$('#refresh-sync').disabled=true;
  try{
@@ -70,5 +73,8 @@ async function pullUpdates(){
 }
 $('#refresh-sync').onclick=pullUpdates;
 $('#editor').addEventListener('close',pullUpdates);
-setInterval(pullUpdates,60000);
-pullUpdates();
+if(hosted){
+ $('#sync-status').textContent='Saved in this browser · hosted edition';
+ $('#refresh-sync').hidden=true;
+ $('#sync-details').innerHTML='<p>This hosted tracker saves applications in this browser. Use Export and Import to move a backup from your local tracker. Gmail automation runs in the local app and is not connected to this hosted edition.</p>';
+}else{setInterval(pullUpdates,60000);pullUpdates();}

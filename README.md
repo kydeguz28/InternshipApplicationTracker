@@ -39,3 +39,11 @@ npm test
 Dashboard statuses are mutually exclusive. Needs Follow-up is an explicit status; dates do not automatically change it. Checkbox changes to To Apply clear the application date; Undo restores the prior state. Backup imports replace the current list after confirmation.
 
 A GitHub repository stores the code; pushing it does not create a live hosted website or a cloud Gmail integration.
+
+## Deploy on Vercel
+
+Import this repository into Vercel. The checked-in `vercel.json` selects a static deployment, runs `npm run build`, and publishes only `dist/`. Do not use `npm start` as the Vercel build command; that command starts the local-only server.
+
+The hosted edition saves applications in the current browser and supports manual edits and JSON backup import/export. It does not call the local Gmail/snapshot endpoints. Gmail updates still run through the separately configured local Codex schedule. A private authenticated backend is needed for hosted Gmail sync or shared data across devices.
+
+The build copies only five browser assets. It never publishes the local server, `.runtime/`, automation scripts or credentials. Future pushes to the connected production branch trigger a new Vercel deployment.
