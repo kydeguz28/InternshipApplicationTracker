@@ -12,11 +12,11 @@ Run `npm run build:pages`, commit the generated `docs/` folder, and configure Pa
 
 ## Shared data and privacy
 
-Kyle authorized publication of company names, roles and application statuses. `public-data.json` contains only those fields and opaque record IDs. Email references, private notes, contacts, dates and credentials are excluded. The initial publication restores 55 records.
+Kyle authorized publication of company names, roles, application statuses and public posting links. `public-data.json` contains those fields, public link labels/explanations, and opaque record IDs. `role-links.json` is the reviewed public link catalog; it includes employer postings, explicitly labeled posting copies, possible matches and careers-page fallbacks. Email references, private notes, contacts, dates and credentials are excluded. The checklist contains 56 records. Public link research on September 15, 2026 added 47 links without changing roles or statuses. Gmail access is disconnected and its scheduled updater is paused.
 
-A separately configured local Codex job reads Gmail every six hours and checks employer listings daily, merges verified updates with the private tracker, writes the sanitized public checklist, and pushes GitHub. GitHub Pages redeploys after the push. Gmail credentials are never sent to the website.
+The former six-hour Gmail job is paused following removal of Google access. Chat can research public listings and push reviewed updates when requested. GitHub Pages redeploys after the push. Gmail credentials are never sent to the website.
 
-The website checks the published file every minute. Notes, priorities, local status overrides and deletions remain in browser storage. Browser edits do not write back to GitHub; ask chat to change the shared checklist. Existing local roles are preserved if missing from a later publication. Export a backup before clearing storage or changing browsers. The public website remains available when the computer is off, but new Gmail checks require the local Codex scheduler to run.
+The website checks the published file every minute. Notes, priorities, local status overrides and deletions remain in browser storage. Browser edits do not write back to GitHub; ask chat to change the shared checklist. Existing local roles are preserved if missing from a later publication. Export a backup before clearing storage or changing browsers. The public website remains available when the computer is off, and no Gmail checks run while access is disconnected.
 
 ## Verification
 

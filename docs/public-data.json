@@ -11,13 +11,19 @@
       "id": "role-07e5ee459d31cec60e2b",
       "company": "Intel",
       "role": "Platform Hardware & Systems Engineering Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://career.uri.edu/jobs/intel-corporation-platform-hardware-and-systems-engineering-intern-bachelors-jr0286827/",
+      "linkLabel": "Posting copy",
+      "linkNote": "University of Rhode Island job-board copy; exact requisition JR0286827."
     },
     {
       "id": "role-0d87e3dc699f1d8e6dae",
       "company": "Boeing",
       "role": "Engineering Opportunities",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://boeing.wd1.myworkdayjobs.com/en-US/INTERN/job/Boeing-Summer-2027-Internship-Program--Paid----Engineering_JR2026505093",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-13d66642f344766e33f6",
@@ -29,19 +35,28 @@
       "id": "role-18d33ed5dd62faed21c4",
       "company": "Red Bull Powertrains",
       "role": "Design Engineering Placement",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://careers.redbullracing.com/en/sites/CX_2/jobs/",
+      "linkLabel": "Careers",
+      "linkNote": "Search requisition 10229. The individual job page could not be verified; this is the employer job board."
     },
     {
       "id": "role-1b3af6a12213896b0190",
       "company": "Zipline",
       "role": "Applications Engineer Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://www.zipline.com/open-roles/7909946003?gh_jid=7909946003",
+      "linkLabel": "Posting",
+      "linkNote": "Matching title on Zipline's Summer 2027 job board. Original application requisition was not recorded."
     },
     {
       "id": "role-2125e0c95de6296146ba",
       "company": "Anduril",
       "role": "2027 Manufacturing Engineer Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://job-boards.greenhouse.io/andurilindustries/jobs/5153218007",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-281e9b0c43a9d2563a44",
@@ -59,25 +74,37 @@
       "id": "role-305e3e5d6885e0f9a4d8",
       "company": "Stryker",
       "role": "Summer 2027 Internship — Mechanical Engineering — California (Evergreen)",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://stryker.wd1.myworkdayjobs.com/StrykerCareers/job/San-Jose-California/Summer-2027-Internship---Mechanical-Engineering---California_R572600",
+      "linkLabel": "Posting",
+      "linkNote": "Exact requisition match: R572600."
     },
     {
       "id": "role-3963a1f05667d84165c2",
       "company": "Honeywell",
       "role": "Mechanical Engineering Summer 2027 Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://www.builtinnyc.com/job/mechanical-engineering-summer-2027-intern/10863349",
+      "linkLabel": "Possible match",
+      "linkNote": "Built In copy matches the title and summer; requisition 155576 could not be confirmed."
     },
     {
       "id": "role-4162cce6cde65a3245f4",
       "company": "Anduril",
       "role": "2027 Mechanical Engineer Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://job-boards.greenhouse.io/andurilindustries/jobs/5153187007",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-42a92379ba669d0b934d",
       "company": "TSMC Arizona",
       "role": "Summer 2027 Engineering Internship",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://ro.careers.tsmc.com/job/Phoenix-Summer-2027-TSMC-AZ-Internship-Opportunities-Engineering-Roles-AZ-85001/1361003166/",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-42c22aef1c75559c3d43",
@@ -89,67 +116,100 @@
       "id": "role-43a798dd8c3e28305eaf",
       "company": "LLNL",
       "role": "Laser & Experimental Systems Engineering Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://jobs.smartrecruiters.com/LLNL/3743990015113316-laser-and-experimental-systems-engineering-undergraduate-intern-summer-2027",
+      "linkLabel": "Posting",
+      "linkNote": "Exact requisition match: REF8790T."
     },
     {
       "id": "role-46c7eb1474c578509d2a",
       "company": "Freeform",
       "role": "Additive Engineering Intern, Summer 2027",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://job-boards.greenhouse.io/freeformfuturecorp/jobs/7963719003",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-4966f3075c4ca85e2a26",
       "company": "Intuitive",
       "role": "Manufacturing/Equipment/Supplier Engineering Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://jobs.smartrecruiters.com/Intuitive/744000147092239-manufacturing-equipment-supplier-engineering-intern-mechanical-or-biomedical-engineering-majors-",
+      "linkLabel": "Posting",
+      "linkNote": "Summer 2027 posting, REF25110V; matching title, original application requisition not recorded."
     },
     {
       "id": "role-4db92e36d3e16678b9ba",
       "company": "Sunday Robotics",
       "role": "Industrial Design Intern",
-      "status": "Rejected"
+      "status": "Rejected",
+      "link": "https://www.sunday.ai/careers",
+      "linkLabel": "Careers",
+      "linkNote": "Original Industrial Design internship was not located. Employer careers page only."
     },
     {
       "id": "role-5387d9a260825a8d73f4",
       "company": "Moog",
       "role": "Actuation Engineering Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://moog.wd5.myworkdayjobs.com/en-US/MOOG_External_Career_Site",
+      "linkLabel": "Careers",
+      "linkNote": "Exact application posting not confirmed. Search Actuation Engineering Intern on the employer board."
     },
     {
       "id": "role-5461245fa206751a5d7a",
       "company": "Figure",
       "role": "Mechanical applications — older / Fall 2026",
-      "status": "Rejected"
+      "status": "Rejected",
+      "link": "https://www.figure.ai/careers",
+      "linkLabel": "Careers",
+      "linkNote": "Older/Fall 2026 application; exact historical posting not located."
     },
     {
       "id": "role-5a7a7c2f99abfe7701e2",
       "company": "Xona Space Systems",
       "role": "Mechanical Engineering Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://jobs.toyota.ventures/companies/xona-space-systems/jobs/86371350-mechanical-engineering-intern-summer-2027",
+      "linkLabel": "Posting copy",
+      "linkNote": "Toyota Ventures portfolio job-board copy of Xona Mechanical Engineering Intern, Summer 2027."
     },
     {
       "id": "role-5bf029e605fdd2b3cbb8",
       "company": "Heirloom",
       "role": "Mechanical Engineer Intern",
-      "status": "Rejected"
+      "status": "Rejected",
+      "link": "https://www.heirloomcarbon.com/careers",
+      "linkLabel": "Careers",
+      "linkNote": "Original Mechanical Engineer internship was not located. Employer careers page only."
     },
     {
       "id": "role-64b1efc72267f0ba45f3",
       "company": "Western Digital",
       "role": "Hardware Engineering Intern",
-      "status": "Needs Follow-up"
+      "status": "Needs Follow-up",
+      "link": "https://jobs.smartrecruiters.com/WesternDigital/744000140949875-summer-2027-intern-hardware-engineering",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-71c276309467041e7152",
       "company": "Williams F1",
       "role": "Structures Industrial Placement",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://careers.williamsf1.com/job/structures-industrial-placement-in-grove-wantage-jid-689",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-7477afc9939d407a1053",
       "company": "Reframe Systems",
       "role": "Mechanical Engineer Internship (Summer 27)",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://jobs.ashbyhq.com/reframesystems/c4db63dc-4023-44f7-b971-d94cc730ab9f",
+      "linkLabel": "Posting",
+      "linkNote": "Employer title says Summer 27; description also mentions fall. Confirm timing with the employer."
     },
     {
       "id": "role-78c546e73c933c9a7ff9",
@@ -161,55 +221,82 @@
       "id": "role-7aea13a05f4a7b272f1c",
       "company": "McLaren Racing",
       "role": "Engineering Intern",
-      "status": "Rejected"
+      "status": "Rejected",
+      "link": "https://racingcareers.mclaren.com/",
+      "linkLabel": "Careers",
+      "linkNote": "Original Engineering internship was not located. Employer careers page only."
     },
     {
       "id": "role-7bfb1632df823502a689",
       "company": "Zipline",
       "role": "Controls Engineer Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://www.zipline.com/open-roles/7903889003?gh_jid=7903889003",
+      "linkLabel": "Posting",
+      "linkNote": "Matching title on Zipline's Summer 2027 job board. Original application requisition was not recorded."
     },
     {
       "id": "role-827c4a472b0475362f81",
       "company": "Vertiv",
       "role": "Mechanical Engineering Intern, Summer 2027",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://www.vertiv.com/en-us/about/career-center/start-your-journey/",
+      "linkLabel": "Careers",
+      "linkNote": "Exact requisition 20278503 was not located. Employer careers page only."
     },
     {
       "id": "role-86f4d34f9debe65dfb89",
       "company": "Freeform",
       "role": "Mechanical Engineering Intern, Summer 2027",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://job-boards.greenhouse.io/freeformfuturecorp/jobs/7894117003",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-87807e109d4f4ce0af4e",
       "company": "Zipline",
       "role": "Long Range Platform Hardware Engineering Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://www.zipline.com/open-roles/7891460003?gh_jid=7891460003",
+      "linkLabel": "Posting",
+      "linkNote": "Matching title on Zipline's Summer 2027 job board. Original application requisition was not recorded."
     },
     {
       "id": "role-912e4a894b64c6be4ecf",
       "company": "Shield AI",
       "role": "Advanced Manufacturing Engineering Intern, Summer 2027",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://jobs.lever.co/shieldai/c41c41a2-83d8-41a0-8a3b-ff8b84dc1c8a",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-962c9d9bd8567b00a85d",
       "company": "Zipline",
       "role": "Computational Physics Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://www.zipline.com/open-roles/7904720003?gh_jid=7904720003",
+      "linkLabel": "Posting",
+      "linkNote": "Matching title on Zipline's Summer 2027 job board. Original application requisition was not recorded."
     },
     {
       "id": "role-9aee1d44e1daf6f49180",
       "company": "Solcoa",
       "role": "Mechanical Engineering Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://jobs.ashbyhq.com/solcoa/3ee78458-e202-4825-b0f9-abc73252f7c7",
+      "linkLabel": "Posting",
+      "linkNote": "Matching Mechanical Engineering Intern title; posting says able to start soon and does not specify Summer 2027."
     },
     {
       "id": "role-9d29a7c94b427fb65a46",
       "company": "Neuralink",
       "role": "Role not specified",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://boards.greenhouse.io/neuralink",
+      "linkLabel": "Careers",
+      "linkNote": "Saved application does not identify a role, so an exact posting cannot be matched."
     },
     {
       "id": "role-a0dd6f9056d6de612b25",
@@ -221,79 +308,118 @@
       "id": "role-ac25403f322413538e4f",
       "company": "MKS",
       "role": "Mechanical Automation Engineering Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://www.dice.com/job-detail/aafd69c4-0a35-4912-960e-87e9ed61acca",
+      "linkLabel": "Posting copy",
+      "linkNote": "Dice copy of MKS 2027 Summer Mechanical Automation Engineering Intern; original application requisition not recorded."
     },
     {
       "id": "role-af49d1fc59d42f1298e9",
       "company": "Medtronic",
       "role": "Engineering Intern, Summer 2027",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://medtronic.wd1.myworkdayjobs.com/MedtronicCareers/job/Engineering-Intern---Summer-2027_R73623-1",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-b2cff9faa053ba51cf8b",
       "company": "Beyond Reach Labs",
       "role": "Mechanical Engineer Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://jobs.ashbyhq.com/beyondreachlabs/171c54f7-b844-4cee-991e-b15e561fd944",
+      "linkLabel": "Possible match",
+      "linkNote": "Matching title, but this posting is Fall 2026. The saved application does not identify a season or requisition."
     },
     {
       "id": "role-b7b420ca854fdfe92370",
       "company": "Skydio",
       "role": "Flight Test Intern, Summer 2027",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://jobs.ashbyhq.com/skydio/3eb06d6e-b6f0-4814-a80a-f1c43075873b",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-bbd3430806eeb2acfed9",
       "company": "Zipline",
       "role": "Mechanical Engineer Intern, Summer 2027",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://www.zipline.com/open-roles/7866071003?gh_jid=7866071003",
+      "linkLabel": "Posting",
+      "linkNote": "Matching title on Zipline's Summer 2027 job board. Original application requisition was not recorded."
     },
     {
       "id": "role-bc55654d4e5a50758666",
       "company": "Rocket Lab",
       "role": "Turbomachinery Intern, Summer 2027",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://job-boards.greenhouse.io/rocketlab/jobs/7987208003",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-be7eee6dcaf3905663fd",
       "company": "Hermeus",
       "role": "Manufacturing Engineering Intern, 2027",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://jobs.lever.co/hermeus/5f6a6e79-9836-4c33-b40b-a2bb6c27bd06",
+      "linkLabel": "Posting",
+      "linkNote": "Manufacturing Engineering Intern, Spring/Summer/Fall 2027, Los Angeles."
     },
     {
       "id": "role-bf3a302a50e55914e2a2",
       "company": "Rocket Lab",
       "role": "Integration & Test Intern, Summer 2027",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://job-boards.greenhouse.io/rocketlab/jobs/7987250003",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-c67f7b8c1bb710ee6f16",
       "company": "Rocket Lab",
       "role": "Additive Manufacturing Intern, Summer 2027",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://job-boards.greenhouse.io/rocketlab/jobs/7984600003",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-cbf12ff272ac0a9e5b54",
       "company": "Intuitive",
       "role": "Mechanical Engineering Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://jobs.smartrecruiters.com/Intuitive/744000147091674-mechanical-engineering-intern",
+      "linkLabel": "Posting",
+      "linkNote": "Summer 2027 posting, REF25109I; matching title, original application requisition not recorded."
     },
     {
       "id": "role-cd9428259c53a5166454",
       "company": "Zipline",
       "role": "Hardware Test Intern",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://www.zipline.com/open-roles/7903483003?gh_jid=7903483003",
+      "linkLabel": "Posting",
+      "linkNote": "Matching title on Zipline's Summer 2027 job board. Original application requisition was not recorded."
     },
     {
       "id": "role-d0e4ff406728616d278e",
       "company": "Amazon Robotics",
       "role": "Hardware Development Engineer Intern/Co-op, Robotics – 2027",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://www.amazon.jobs/en/jobs/10535282/hardware-development-engineer-intern-co-op-robotics-2027",
+      "linkLabel": "Posting",
+      "linkNote": "Exact requisition match: 10535282."
     },
     {
       "id": "role-dae63a0041ca74464a3f",
       "company": "Red Bull Powertrains",
       "role": "R&D Test Placement",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://careers.redbullracing.com/en/sites/CX_2/jobs/",
+      "linkLabel": "Careers",
+      "linkNote": "Search requisition 10228. The individual job page could not be verified; this is the employer job board."
     },
     {
       "id": "role-dd09909140904ed307a4",
@@ -305,25 +431,37 @@
       "id": "role-e468d4aff5cd92debe2e",
       "company": "General Matter",
       "role": "Role not specified",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://generalmatter.com/careers/",
+      "linkLabel": "Careers",
+      "linkNote": "Saved application does not identify a role, so an exact posting cannot be matched."
     },
     {
       "id": "role-e552b811ad9835a00dd8",
       "company": "K2 Space",
       "role": "Mechanical Engineering Intern, Summer 2027",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5411915008",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-ecfb01876e1a8c0a815f",
       "company": "Skydio",
       "role": "Product Design Engineer Intern, Summer 2027",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://www.skydio.com/jobs/e541e878-567c-4c03-add8-baf19c63418f",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     },
     {
       "id": "role-ef378de1ad7ce1161307",
       "company": "Visa Cash App Racing Bulls F1 Team",
       "role": "Industrial Placement Programme 2027/2028",
-      "status": "Applied"
+      "status": "Applied",
+      "link": "https://jobs.smartrecruiters.com/oneclick-ui/company/RedBull/publication/42c4a634-410f-464b-a990-1431866cbc17?dcr_ci=RedBull",
+      "linkLabel": "Posting",
+      "linkNote": "Employer application page for the 2027/2028 Industrial Placement Programme."
     },
     {
       "id": "role-f22de231a3e839a0d4ab",
@@ -335,7 +473,10 @@
       "id": "role-fdd692c46a6bb748a2d5",
       "company": "SpaceX",
       "role": "Summer 2027 Engineering Internship/Co-op",
-      "status": "Interviewing"
+      "status": "Interviewing",
+      "link": "https://boards.greenhouse.io/spacex/jobs/8621740002?gh_jid=8621740002",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
     }
   ]
 }

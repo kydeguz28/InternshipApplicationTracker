@@ -14,5 +14,32 @@ test('published updates preserve notes, local overrides and deletions',()=>{
 test('published data contains only authorized fields',async()=>{
  const data=JSON.parse(await readFile(new URL('../public-data.json',import.meta.url),'utf8'));
  assert.ok(data.applications.length>0);
- for(const r of data.applications){assert.deepEqual(Object.keys(r).sort(),['company','id','role','status']);assert.match(r.id,/^role-[a-f0-9]{20}$/);}
+ for(const r of data.applications){assert.ok(Object.keys(r).every(k=>['company','id','role','status','link','linkLabel','linkNote'].includes(k)));if(r.link){assert.equal(new URL(r.link).protocol,'https:');assert.ok(['Posting','Posting copy','Possible match','Careers'].includes(r.linkLabel));}assert.match(r.id,/^role-[a-f0-9]{20}$/);}
+});
+
+test('public links reach existing records and preserve local URLs',()=>{
+ const payload=data('Applied');
+ payload.applications[0]={...payload.applications[0],link:'https://example.org/job/1',linkLabel:'Posting',linkNote:'Matching title'};
+ const existing={...data('Applied').applications[0],priority:'Top',notes:'Private',link:''};
+ const first=mergePublic([existing],{'role-one':{status:'Applied'}},payload);
+ assert.equal(first.rows.length,1);assert.equal(first.rows[0].link,payload.applications[0].link);
+ assert.equal(first.rows[0].linkNote,'Matching title');assert.equal(first.rows[0].notes,'Private');
+ payload.applications[0].link='https://example.org/job/2';
+ payload.applications[0].linkLabel='Careers';
+ const updated=mergePublic(first.rows,first.baseline,payload);
+ assert.equal(updated.rows[0].link,'https://example.org/job/2');assert.equal(updated.rows[0].linkLabel,'Careers');
+ updated.rows[0].link='https://my.example/saved';updated.rows[0].linkLabel='My link';
+ const custom=mergePublic(updated.rows,updated.baseline,payload);
+ assert.equal(custom.rows[0].link,'https://my.example/saved');assert.equal(custom.rows[0].linkLabel,'My link');
+ const empty=mergePublic(custom.rows,custom.baseline,data('Applied'));
+ assert.equal(empty.rows[0].link,'https://my.example/saved');
+});
+
+test('published catalog covers submitted roles and contains no private fields',async()=>{
+ const published=JSON.parse(await readFile(new URL('../public-data.json',import.meta.url),'utf8'));
+ const catalog=JSON.parse(await readFile(new URL('../role-links.json',import.meta.url),'utf8'));
+ for(const row of published.applications){
+  if(row.status!=='To Apply'){assert.ok(row.link);assert.deepEqual(catalog[row.id],{link:row.link,linkLabel:row.linkLabel,linkNote:row.linkNote});}
+ }
+ for(const entry of Object.values(catalog))assert.deepEqual(Object.keys(entry).sort(),['link','linkLabel','linkNote']);
 });
