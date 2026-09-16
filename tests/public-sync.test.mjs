@@ -39,7 +39,12 @@ test('published catalog covers submitted roles and contains no private fields',a
  const published=JSON.parse(await readFile(new URL('../public-data.json',import.meta.url),'utf8'));
  const catalog=JSON.parse(await readFile(new URL('../role-links.json',import.meta.url),'utf8'));
  for(const row of published.applications){
-  if(row.status!=='To Apply'){assert.ok(row.link);assert.deepEqual(catalog[row.id],{link:row.link,linkLabel:row.linkLabel,linkNote:row.linkNote});}
+  {assert.ok(row.link);assert.deepEqual(catalog[row.id],{link:row.link,linkLabel:row.linkLabel,linkNote:row.linkNote});}
  }
  for(const entry of Object.values(catalog))assert.deepEqual(Object.keys(entry).sort(),['link','linkLabel','linkNote']);
+});
+
+test("every published To Apply role has a specific posting link",async()=>{
+ const data=JSON.parse(await readFile(new URL("../public-data.json",import.meta.url),"utf8"));
+ for(const row of data.applications.filter(r=>r.status==="To Apply")){assert.ok(row.link);assert.ok(["Posting","Posting copy"].includes(row.linkLabel));}
 });
