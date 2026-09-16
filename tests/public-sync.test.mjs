@@ -14,7 +14,7 @@ test('published updates preserve notes, local overrides and deletions',()=>{
 test('published data contains only authorized fields',async()=>{
  const data=JSON.parse(await readFile(new URL('../public-data.json',import.meta.url),'utf8'));
  assert.ok(data.applications.length>0);
- for(const r of data.applications){assert.ok(Object.keys(r).every(k=>['company','id','role','status','link','linkLabel','linkNote'].includes(k)));if(r.link){assert.equal(new URL(r.link).protocol,'https:');assert.ok(['Posting','Posting copy','Possible match','Careers'].includes(r.linkLabel));}assert.match(r.id,/^role-[a-f0-9]{20}$/);}
+ for(const r of data.applications){assert.ok(Object.keys(r).every(k=>['company','id','role','status','link','linkLabel','linkNote','location','requisitionId'].includes(k)));if(r.link){assert.equal(new URL(r.link).protocol,'https:');assert.ok(['Posting','Posting copy','Possible match','Careers'].includes(r.linkLabel));}assert.match(r.id,/^role-[a-f0-9]{20}$/);}
 });
 
 test('public links reach existing records and preserve local URLs',()=>{
@@ -39,9 +39,9 @@ test('published catalog covers submitted roles and contains no private fields',a
  const published=JSON.parse(await readFile(new URL('../public-data.json',import.meta.url),'utf8'));
  const catalog=JSON.parse(await readFile(new URL('../role-links.json',import.meta.url),'utf8'));
  for(const row of published.applications){
-  {assert.ok(row.link);assert.deepEqual(catalog[row.id],{link:row.link,linkLabel:row.linkLabel,linkNote:row.linkNote});}
+  {assert.ok(row.link);const expected={link:row.link,linkLabel:row.linkLabel,linkNote:row.linkNote};for(const k of ['location','requisitionId'])if(row[k])expected[k]=row[k];assert.deepEqual(catalog[row.id],expected);}
  }
- for(const entry of Object.values(catalog))assert.deepEqual(Object.keys(entry).sort(),['link','linkLabel','linkNote']);
+ for(const entry of Object.values(catalog)){assert.ok(Object.keys(entry).every(k=>['link','linkLabel','linkNote','location','requisitionId'].includes(k)));for(const k of ['location','requisitionId'])if(k in entry)assert.equal(typeof entry[k],'string');}
 });
 
 test("every published To Apply role has a specific posting link",async()=>{

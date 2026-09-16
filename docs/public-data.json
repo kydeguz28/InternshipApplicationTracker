@@ -80,7 +80,20 @@
       "status": "To Apply",
       "link": "https://job-boards.greenhouse.io/rocketlab/jobs/7990365003",
       "linkLabel": "Posting",
-      "linkNote": "Matching employer posting verified September 15, 2026."
+      "linkNote": "Matching employer posting verified September 15, 2026.",
+      "location": "Long Beach, CA",
+      "requisitionId": "7990365003"
+    },
+    {
+      "id": "role-2a8c1365b872331f7103",
+      "company": "Hermeus",
+      "role": "Mechanical Engineering Intern, Spring/Summer 2027",
+      "status": "To Apply",
+      "link": "https://jobs.lever.co/hermeus/1bc5c858-1b04-4093-80a0-2ba3491afc60",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting verified September 16, 2026.",
+      "location": "Los Angeles, CA",
+      "requisitionId": "1bc5c858-1b04-4093-80a0-2ba3491afc60"
     },
     {
       "id": "role-305e3e5d6885e0f9a4d8",
@@ -90,6 +103,17 @@
       "link": "https://stryker.wd1.myworkdayjobs.com/StrykerCareers/job/San-Jose-California/Summer-2027-Internship---Mechanical-Engineering---California_R572600",
       "linkLabel": "Posting",
       "linkNote": "Exact requisition match: R572600."
+    },
+    {
+      "id": "role-38fc5039f2ee9928fb79",
+      "company": "Astranis",
+      "role": "Mechanical Engineer Intern, Summer 2027",
+      "status": "To Apply",
+      "link": "https://job-boards.greenhouse.io/astranis/jobs/4704601006",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting verified September 16, 2026.",
+      "location": "San Francisco, CA",
+      "requisitionId": "4704601006"
     },
     {
       "id": "role-3963a1f05667d84165c2",
@@ -200,6 +224,17 @@
       "linkNote": "Original Mechanical Engineer internship was not located. Employer careers page only."
     },
     {
+      "id": "role-61a7207ec5e9f4b8d187",
+      "company": "Hermeus",
+      "role": "Structures/Mechanical Engineering Intern, Spring/Summer 2027",
+      "status": "To Apply",
+      "link": "https://jobs.lever.co/hermeus/60b5d40a-1065-4bd2-8c72-6b2fb69d4761",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting verified September 16, 2026.",
+      "location": "Atlanta, GA",
+      "requisitionId": "60b5d40a-1065-4bd2-8c72-6b2fb69d4761"
+    },
+    {
       "id": "role-64b1efc72267f0ba45f3",
       "company": "Western Digital",
       "role": "Hardware Engineering Intern",
@@ -207,6 +242,17 @@
       "link": "https://jobs.smartrecruiters.com/WesternDigital/744000140949875-summer-2027-intern-hardware-engineering",
       "linkLabel": "Posting",
       "linkNote": "Matching employer posting; recovered from public sources on September 15, 2026."
+    },
+    {
+      "id": "role-71974280e1d97a917762",
+      "company": "Saronic",
+      "role": "Mechanical Engineer Intern, Summer 2027",
+      "status": "To Apply",
+      "link": "https://jobs.ashbyhq.com/saronic/f52ae6eb-7eba-4c64-97c7-57e2a234e088",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting verified September 16, 2026.",
+      "location": "Austin, TX",
+      "requisitionId": "f52ae6eb-7eba-4c64-97c7-57e2a234e088"
     },
     {
       "id": "role-71c276309467041e7152",
@@ -449,7 +495,9 @@
       "status": "To Apply",
       "link": "https://avav.wd1.myworkdayjobs.com/AVAV/job/Simi-Valley-CA/Summer-2027-Aeromechanical-Engineering-Intern_8387",
       "linkLabel": "Posting",
-      "linkNote": "Matching employer posting verified September 15, 2026."
+      "linkNote": "Matching employer posting verified September 15, 2026.",
+      "location": "Simi Valley, CA / other U.S. locations",
+      "requisitionId": "8387"
     },
     {
       "id": "role-e468d4aff5cd92debe2e",
@@ -494,7 +542,20 @@
       "status": "To Apply",
       "link": "https://avav.wd1.myworkdayjobs.com/AVAV/job/Simi-Valley-CA/Summer-2027-Mechanical-Engineering-Intern_8558",
       "linkLabel": "Posting",
-      "linkNote": "Matching employer posting verified September 15, 2026."
+      "linkNote": "Matching employer posting verified September 15, 2026.",
+      "location": "Simi Valley, CA",
+      "requisitionId": "8558"
+    },
+    {
+      "id": "role-f9309c1cfa80f9cf06f2",
+      "company": "Rocket Lab",
+      "role": "Structural Analysis Intern, Summer 2027",
+      "status": "To Apply",
+      "link": "https://job-boards.greenhouse.io/rocketlab/jobs/7986690003",
+      "linkLabel": "Posting",
+      "linkNote": "Matching employer posting verified September 16, 2026.",
+      "location": "Long Beach, CA",
+      "requisitionId": "7986690003"
     },
     {
       "id": "role-fdd692c46a6bb748a2d5",
