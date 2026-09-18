@@ -7,7 +7,7 @@ import {validateRows} from './data.js';
 import {validateFeed,normalizeSyncState} from './sync.js';
 const root=fileURLToPath(new URL('.',import.meta.url));
 const port=Number(process.env.PORT||4173),origin=`http://localhost:${port}`;
-const staticFiles=new Set(['index.html','styles.css','app.js','data.js','sync.js']);
+const staticFiles=new Set(['index.html','styles.css','app.js','data.js','sync.js','public-sync.js','public-data.json','cloud-sync.js']);
 const types={'.html':'text/html','.js':'text/javascript','.css':'text/css'};
 let writeQueue=Promise.resolve();
 const server=http.createServer(async(req,res)=>{
@@ -26,7 +26,7 @@ const server=http.createServer(async(req,res)=>{
    const op=writeQueue.catch(()=>{}).then(async()=>{await mkdir(path.join(root,'.runtime'),{recursive:true});const file=path.join(root,'.runtime/browser-snapshot.json');await writeFile(file+'.tmp',JSON.stringify(snapshot));await rename(file+'.tmp',file);});writeQueue=op;await op;return send(200,{saved:true});
   }
   const file=pathname==='/'?'index.html':pathname.slice(1);if(req.method!=='GET'||!staticFiles.has(file))return send(404,{error:'Not found'});
-  return send(200,await readFile(path.join(root,file),'utf8'),types[path.extname(file)]);
+  return send(200,await readFile(path.join(root,file==='cloud-sync.js'?'dist/cloud-sync.js':file),'utf8'),types[path.extname(file)]);
  }catch{return send(500,{error:'Unable to read or save local data. Your browser copy is unchanged.'});}
 });
 server.listen(port,'127.0.0.1',()=>{console.log(`Internship Desk is running at ${origin}`);if(process.argv.includes('--open')&&process.platform==='win32')spawn('rundll32.exe',['url.dll,FileProtocolHandler',origin],{windowsHide:true,stdio:'ignore'});});

@@ -1,8 +1,10 @@
+import {startCloudSync} from './cloud-sync.js';
 import {mergePublic} from './public-sync.js';
 import {mergeFeed,emptySyncState,normalizeSyncState} from './sync.js';
 import {SEED,STATUSES,PRIORITIES,validateRows,filteredRows,changeStatus,safeLink} from './data.js';
 const hosted=document.body.dataset.hosting==='static';
 const $=s=>document.querySelector(s), KEY='kyle.internships.v1', esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])), cls=s=>s.toLowerCase().replaceAll(' ','-');
+let cloudUI=null;
 let syncState=emptySyncState(),undoSync=null,syncBusy=false,snapshotQueue=Promise.resolve();
 let rows=structuredClone(SEED),loadError='',view='All applications',format='table',undo=null,toastTimer;
 try{const raw=localStorage.getItem(KEY);if(raw){const parsed=JSON.parse(raw);if(parsed.schemaVersion!==1)throw Error('Unsupported backup version');rows=validateRows(parsed.applications);syncState=normalizeSyncState(parsed.syncState);}}catch(e){loadError='Saved data could not be loaded. Export recovery data before making changes.';}
@@ -10,7 +12,7 @@ const options=(values,current='')=>values.map(v=>`<option value="${esc(v)}" ${v=
 $('#status-filter').innerHTML='<option value="">All statuses</option>'+options(STATUSES);$('#priority-filter').innerHTML='<option value="">All priorities</option>'+options(PRIORITIES);
 const form=$('#role-form');form.elements.status.innerHTML=options(STATUSES);form.elements.priority.innerHTML=options(PRIORITIES);
 function toast(message,canUndo=false){clearTimeout(toastTimer);$('#toast').hidden=false;$('#toast').textContent=message;if(canUndo){const b=document.createElement('button');b.textContent='Undo';b.onclick=()=>{if(undo){rows=undo;syncState=undoSync||syncState;undo=null;undoSync=null;persist();render();toast('Change undone.');}};$('#toast').append(b);}toastTimer=setTimeout(()=>$('#toast').hidden=true,canUndo?12000:6000);}
-function persist(){try{if(loadError){throw Error('Recovery required');}localStorage.setItem(KEY,JSON.stringify({schemaVersion:1,applications:rows,syncState}));$('#save-state').textContent='Saved on this browser';$('#save-state').classList.remove('error-state');saveSnapshot();return true;}catch{$('#save-state').textContent='Not saved · export a backup';$('#save-state').classList.add('error-state');toast('Browser storage unavailable. Export a backup to keep your changes.');return false;}}
+function persist(){try{if(loadError){throw Error('Recovery required');}localStorage.setItem(KEY,JSON.stringify({schemaVersion:1,applications:rows,syncState}));$('#save-state').textContent='Saved on this browser';$('#save-state').classList.remove('error-state');saveSnapshot();cloudUI?.changed();return true;}catch{$('#save-state').textContent='Not saved · export a backup';$('#save-state').classList.add('error-state');toast('Browser storage unavailable. Export a backup to keep your changes.');return false;}}
 function mutate(fn,message){undo=structuredClone(rows);undoSync=structuredClone(syncState);fn();const saved=persist();render();if(saved)toast(message,true);}
 function setView(v){view=v;$('#status-filter').value='';render();}
 function visible(){return filteredRows(rows,{view,query:$('#search').value,status:$('#status-filter').value,priority:$('#priority-filter').value,company:$('#company-filter').value,sort:$('#sort').value});}
@@ -73,6 +75,7 @@ async function pullUpdates(){
  finally{syncBusy=false;$('#refresh-sync').disabled=false;}
 }
 async function pullPublicUpdates(){
+ if(cloudUI?.active)return;
  if(syncBusy||loadError||$('#editor').open)return;
  syncBusy=true;$('#refresh-sync').disabled=true;
  try{
@@ -83,11 +86,18 @@ async function pullPublicUpdates(){
   const changed=JSON.stringify(rows)!==JSON.stringify(result.rows);
   rows=result.rows;syncState.public=result.baseline;persist();if(changed)render();
   $('#sync-status').textContent='Shared checklist · '+payload.applications.length+' published roles';
-  $('#sync-details').innerHTML='<p>Chat publishes company names, roles, statuses and public job links when you request an update. Gmail updates are paused. Posting copies, possible matches and careers-page fallbacks are labeled separately. This page checks every minute. Your notes, priorities, manual status overrides and deletions stay in this browser. Browser edits are not sent to GitHub. Ask chat to update the shared checklist.</p>';
+  $('#sync-details').innerHTML='<p>Chat publishes company names, roles, statuses and public job links when you request an update. Gmail updates are paused. Posting copies, possible matches and careers-page fallbacks are labeled separately. This page checks every minute. Sign in above to sync your private edits between browsers. Browser edits are not published to GitHub. The cloud copy becomes your source of truth while signed in.</p>';
  }catch{$('#sync-status').textContent='Shared updates unavailable · saved roles are safe';}
  finally{syncBusy=false;$('#refresh-sync').disabled=false;}
 }
 const refresh=hosted?pullPublicUpdates:pullUpdates;
 $('#refresh-sync').onclick=refresh;
 $('#editor').addEventListener('close',refresh);
-setInterval(refresh,60000);refresh();
+setInterval(refresh,60000);
+await refresh();
+cloudUI=startCloudSync({
+ getLocal:()=>structuredClone({schemaVersion:1,applications:rows,syncState}),
+ applyLocal:doc=>{const next=validateRows(doc.applications);rows=next;syncState=normalizeSyncState(doc.syncState);undo=null;undoSync=null;if(!persist())throw Error('Browser storage unavailable');render();},
+ canApply:()=>!loadError&&!$('#editor').open,
+ download
+});

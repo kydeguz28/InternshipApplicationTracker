@@ -4,7 +4,7 @@ A static internship tracker with a shared checklist maintained through Codex.
 
 ## Launch locally
 
-Run `npm start` and open http://localhost:4173. For the hosted edition, run `npm run build` and serve `dist/` with any static web server.
+Run `npm ci`, `npm run build`, then `npm start` and open http://localhost:4173. For the hosted edition, run `npm run build` and serve `dist/` with any static web server.
 
 ## GitHub Pages
 
@@ -23,3 +23,9 @@ The website checks the published file every minute. Notes, priorities, local sta
 `npm test` verifies data validation, Gmail merge rules, public status merging and the public field allowlist. Static builds copy an explicit list of browser assets; `.runtime/` and server files are excluded.
 
 New To Apply entries published by chat require a reviewed specific posting link in `role-links.json`. The private publisher refuses a publication containing queued roles without one.
+
+## Private browser sync
+
+Sign in with the enrolled email on each browser. Open each one-time email link in the browser you want to connect. Choose the cloud copy to restore your saved backup, or explicitly choose a newer local copy. Private edits are stored in Supabase, not published to GitHub. Changes save automatically and check for remote updates every ten seconds while the page is open. Offline edits retry when connected; conflicting edits require a choice. Use one active tracker tab per browser. Export backups before replacing a copy.
+
+The free email service is restricted to organization members and has low email limits; avoid repeated sign-in requests. Gmail access is not required. See cloud/README.md for implementation details.
