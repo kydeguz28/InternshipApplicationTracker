@@ -1,4 +1,4 @@
-import {startCloudSync} from './cloud-sync.js';
+import {startCloudSync} from './cloud-sync.js?v=cloud-sync-2';
 import {mergePublic} from './public-sync.js';
 import {mergeFeed,emptySyncState,normalizeSyncState} from './sync.js';
 import {SEED,STATUSES,PRIORITIES,validateRows,filteredRows,changeStatus,safeLink} from './data.js';
